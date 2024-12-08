@@ -25,9 +25,14 @@
         })
         button[2].addEventListener('click', function(){
             Swal.fire({
-                icon: "error",
-                text: "Something's Wrong",
-                title: "Error"
+                icon: "question",
+                text: "Are you sure you want to do this ?",
+                title: "Hold up..",
+                confirmButtonText: "Yes, i'm sure",
+                showCancelButton : true,
+                cancelButtonText: "No, take me back",
+                confirmButtonColor: "red",
+                cancelButtonColor: "green",
             })
         })
     </script>
