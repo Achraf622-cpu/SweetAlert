@@ -9,6 +9,7 @@
 <body>
     <button>Click Me to see a Normal message</button>
     <button>Click Me to get a Success message</button>
+    <button>Click Me to get a Fail message</button>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script>
         const button = document.querySelectorAll("button")
@@ -20,6 +21,13 @@
                 icon: "success",
                 text: "Done Succesfully",
                 title: "Perfect"
+            })
+        })
+        button[2].addEventListener('click', function(){
+            Swal.fire({
+                icon: "error",
+                text: "Something's Wrong",
+                title: "Error"
             })
         })
     </script>
