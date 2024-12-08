@@ -3,9 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
+    <button id="normal">Click Me to see a Normal message</button>
+    <button id="success">Click Me to get a Success message</button>
+    <button id="fail">Click Me to get a Fail message</button>
+    <button id="danger">Click Me to get a Danger message</button>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        const button = document.querySelectorAll("button")
+        button[0].addEventListener('click', function(){
+            Swal.fire('Hey This is a normal message')
+        })
+        button[1].addEventListener('click', function(){
+            Swal.fire({
+                icon: "success",
+                text: "Done Succesfully",
+                title: "Perfect"
+            })
+        })
+        button[2].addEventListener('click', function(){
+            Swal.fire({
+                icon: "question",
+                text: "Are you sure you want to do this ?",
+                title: "Hold up..",
+                confirmButtonText: "Yes, i'm sure",
+                showCancelButton : true,
+                cancelButtonText: "No, take me back",
+                confirmButtonColor: "red",
+                cancelButtonColor: "green",
+            })
+        })
+        button[3].addEventListener('click', function(){
+            Swal.fire({
+                title: 'Danger!',
+                text: 'Are you sure you want to do this ?!',
+                icon: 'error',
+                confirmButtonText: 'Continue',
+                confirmButtonColor: '#f44336', 
+                background: '#f8d7da', 
+                color: 'red', 
+                showCancelButton: true, 
+                cancelButtonText: 'Go Back',
+                cancelButtonColor: 'green', 
+            });
+        })
+    </script>
 </body>
 </html>
