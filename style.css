@@ -3,11 +3,11 @@ body{
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    gap: 100px;
 }
 
 button {
     max-width: 500px;
-    background-color: #4CAF50;
     border: none;
     color: white;
     padding: 12px 20px;
@@ -21,13 +21,51 @@ button {
     transition: background-color 0.3s, transform 0.2s;
    
 }
+#normal {
+    background-color: #171616;
+}
+#normal:hover{
+    background-color: #070807; 
+}
+#normal:active{
+    background-color: #444544;
+}
+#success {
+    background-color: #42e403a0;
+}
+#success:hover{
+    background-color: #71f13ff1; 
+}
+#success:active{
+    background-color: rgb(132, 223, 132);
+}
+#fail {
+    background-color: #e40303a0;
+}
+#fail:hover{
+    background-color: #f13f3ff1; 
+}
+#fail:active{
+    background-color: rgb(223, 132, 132);
+}
+#danger {
+    background-color: #e403cda0;
+}
+#danger:hover{
+    background-color: #f13fe8f1; 
+}
+#danger:active{
+    background-color: rgb(223, 132, 213);
+}
+
 
 button:hover {
-    background-color: #45a049;
     transform: scale(1.05);
 }
 
 button:active {
     transform: scale(0.95);
-    background-color: #3e8e41;
+}
+h1{
+    background-color: red;
 }
