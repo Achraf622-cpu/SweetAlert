@@ -8,11 +8,19 @@
 </head>
 <body>
     <button>Click Me to see a Normal message</button>
+    <button>Click Me to get a Success message</button>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script>
-        const button = document.querySelector("button")
-        button.addEventListener('click', function(){
+        const button = document.querySelectorAll("button")
+        button[0].addEventListener('click', function(){
             Swal.fire('Hey This is a normal message')
+        })
+        button[1].addEventListener('click', function(){
+            Swal.fire({
+                icon: "success",
+                text: "Done Succesfully",
+                title: "Perfect"
+            })
         })
     </script>
 </body>
