@@ -3,9 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
+    <button>Click Me to see a Normal message</button>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        const button = document.querySelector("button")
+        button.addEventListener('click', function(){
+            Swal.fire('Hey This is a normal message')
+        })
+    </script>
 </body>
 </html>
